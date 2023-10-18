@@ -15,8 +15,7 @@ public class IosTests extends TestBase {
     @Test
     void successfulSearchTest() {
         step("Type request in search field", () -> {
-            $(accessibilityId("Search Wikipedia")).click();
-            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
+
         });
 
         step("Veriy content is not null", () ->

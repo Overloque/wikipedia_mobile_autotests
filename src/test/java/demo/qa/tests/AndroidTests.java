@@ -28,7 +28,7 @@ public class AndroidTests extends TestBase {
 
     @Test
     @DisplayName("Проверка отображения иконки ошибки при переходе в статью")
-    void checkErrorMessage() {
+    void checkErrorIcon() {
         step("Ввести запрос", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
