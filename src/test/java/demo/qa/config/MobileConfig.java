@@ -2,16 +2,16 @@ package demo.qa.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:${env}.properties"})
+@Config.Sources({"classpath:mobile.properties"})
 public interface MobileConfig extends Config {
-    @Key("app")
+    @Key("mobile.${env}.app")
     String getApp();
 
-    @Key("device")
+    @Key("mobile.${env}.device")
     @DefaultValue("Samsung Galaxy S22 Ultra")
     String getDevice();
 
-    @Key("os_version")
+    @Key("mobile.${env}.os_version")
     @DefaultValue("12.0")
     String getVersion();
 }

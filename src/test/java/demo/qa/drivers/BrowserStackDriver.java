@@ -14,8 +14,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BrowserStackDriver implements WebDriverProvider {
-    protected final AuthConfig authConfig = ConfigFactory.create(AuthConfig.class, System.getProperties());
-    protected final MobileConfig mobileConfig = ConfigFactory.create(MobileConfig.class, System.getProperties());
+    protected static final AuthConfig authConfig = ConfigFactory.create(AuthConfig.class, System.getProperties());
+    protected static final MobileConfig mobileConfig = ConfigFactory.create(MobileConfig.class, System.getProperties());
 
     @Nonnull
     @Override
@@ -27,7 +27,7 @@ public class BrowserStackDriver implements WebDriverProvider {
         caps.setCapability("browserstack.key", authConfig.getPassword());
 
         // Set URL of the application under test
-        caps.setCapability("app", mobileConfig.getApp());
+        caps.setCapability("app", "bs://sample.app");
 
         // Specify device and os_version for testing
         caps.setCapability("device", mobileConfig.getDevice());
