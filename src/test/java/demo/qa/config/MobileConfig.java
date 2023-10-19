@@ -2,14 +2,14 @@ package demo.qa.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:mobile.properties"})
+@Config.Sources({"classpath:${env}.properties"})
 public interface MobileConfig extends Config {
-    @Key("mobile.${env}.app")
+    @Key("app")
     String getApp();
 
-    @Key("mobile.${env}.device")
+    @Key("device")
     String getDevice();
 
-    @Key("mobile.${env}.os_version")
+    @Key("os_version")
     String getVersion();
 }
