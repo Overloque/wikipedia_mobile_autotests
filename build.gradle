@@ -17,7 +17,8 @@ def selenideVersion = "6.13.0",
     junitVersion = "5.9.3",
     restAssuredVersion = "5.3.0",
     ownerVersion = "1.0.4",
-    assertjVersion = "3.24.2"
+    assertjVersion = "3.24.2",
+    commonsVersion = "2.11.0"
 
 
 allure {
@@ -43,7 +44,8 @@ dependencies {
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion",
-            "org.assertj:assertj-core:$assertjVersion"
+            "org.assertj:assertj-core:$assertjVersion",
+            "commons-io:commons-io:$commonsVersion",
     )
 }
 
@@ -59,14 +61,14 @@ tasks.withType(Test) {
     }
 }
 
-task android_test(type: Test) {
+task browserstack_test(type: Test) {
     useJUnitPlatform {
-        includeTags("android")
+        includeTags("browserstack")
     }
 }
 
-task ios_test(type: Test) {
+task local_test(type: Test) {
     useJUnitPlatform {
-        includeTags("ios")
+        includeTags("local")
     }
 }

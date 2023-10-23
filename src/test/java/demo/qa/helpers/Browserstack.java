@@ -10,7 +10,7 @@ public class Browserstack extends BrowserStackDriver {
         String url = format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
 
         return given()
-                .auth().basic(authConfig.getUsername(), authConfig.getPassword())
+                .auth().basic(browserstackConfig.getUsername(), browserstackConfig.getPassword())
                 .when()
                 .get(url)
                 .then()
