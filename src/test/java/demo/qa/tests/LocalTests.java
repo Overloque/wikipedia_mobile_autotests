@@ -12,11 +12,11 @@ import static io.qameta.allure.Allure.step;
 @Tag("local")
 public class LocalTests extends TestBase {
     @Test
-    @DisplayName("Проверка 1-го шага")
+    @DisplayName("Проверка страницы 1-го шага")
     void firstWikiPageTest() {
-        step("Открыть страницу", () -> {
-            $(id("org.wikipedia.alpha:id/primaryTextView"))
-                    .shouldHave(text("The Free Encyclopedia …in over 300 languages"));
+        step("Открыть страницу и проверить текст кнопки добавления языков", () -> {
+            $(id("org.wikipedia.alpha:id/addLanguageButton"))
+                    .shouldHave(text("Add or edit languages"));
         });
 
         step("Проверка кнопки добавления языков", () ->
