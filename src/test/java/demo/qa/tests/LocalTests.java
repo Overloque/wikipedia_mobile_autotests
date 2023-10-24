@@ -61,7 +61,7 @@ public class LocalTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Перейти на 4-й шаг")
+    @DisplayName("Проверка страницы 4-го шага")
     void fourthWikiPageTest() {
         step("Перейти на 4-й шаг", () -> {
             $(id("org.wikipedia.alpha:id/fragment_onboarding_forward_button"))
