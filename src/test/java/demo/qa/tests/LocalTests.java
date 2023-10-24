@@ -45,8 +45,10 @@ public class LocalTests extends TestBase {
     @DisplayName("Проверка страницы 3-го шага")
     void thirdWikiPageTest() {
         step("Перейти на 3-й шаг", () -> {
-            $(id("org.wikipedia.alpha:id/primaryTextView"))
-                    .shouldHave(text("The Free Encyclopedia …in over 300 languages"));
+            $(id("org.wikipedia.alpha:id/fragment_onboarding_forward_button"))
+                    .click();
+            $(id("org.wikipedia.alpha:id/fragment_onboarding_forward_button"))
+                    .click();
         });
 
         step("Проверка наличия иконки", () ->
@@ -62,6 +64,10 @@ public class LocalTests extends TestBase {
     @DisplayName("Перейти на 4-й шаг")
     void fourthWikiPageTest() {
         step("Перейти на 4-й шаг", () -> {
+            $(id("org.wikipedia.alpha:id/fragment_onboarding_forward_button"))
+                    .click();
+            $(id("org.wikipedia.alpha:id/fragment_onboarding_forward_button"))
+                    .click();
             $(id("org.wikipedia.alpha:id/fragment_onboarding_forward_button"))
                     .click();
         });

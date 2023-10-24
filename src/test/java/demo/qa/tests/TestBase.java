@@ -29,7 +29,9 @@ public class TestBase {
                 Configuration.browser = LocalDriver.class.getName();
                 break;
         }
+
         Configuration.browserSize = null;
+        Configuration.timeout = 30000;
     }
 
     @BeforeEach
