@@ -15,8 +15,8 @@ public class LocalTests extends TestBase {
     @DisplayName("Проверка страницы 1-го шага")
     void firstWikiPageTest() {
         step("Открыть страницу и проверить текст кнопки добавления языков", () -> {
-            $(id("org.wikipedia.alpha:id/addLanguageButton"))
-                    .shouldHave(text("Add or edit languages"));
+            $(id("org.wikipedia.alpha:id/primaryTextView"))
+                    .shouldHave(text("The Free Encyclopedia"));
         });
 
         step("Проверка кнопки добавления языков", () ->
