@@ -1,6 +1,6 @@
-package demo.qa.helpers;
+package com.wikipedia.helpers;
 
-import demo.qa.drivers.BrowserStackDriver;
+import com.wikipedia.drivers.BrowserStackDriver;
 
 import static io.restassured.RestAssured.given;
 import static java.lang.String.format;

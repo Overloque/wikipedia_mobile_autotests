@@ -3,7 +3,7 @@ plugins {
     id 'io.qameta.allure' version '2.11.2'
 }
 
-group = 'guru.qa'
+group = 'com.wikipedia'
 version = '1.0-SNAPSHOT'
 
 repositories {

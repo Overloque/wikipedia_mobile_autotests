@@ -1,17 +1,21 @@
-package demo.qa.tests;
+package com.wikipedia.tests;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static io.appium.java_client.AppiumBy.id;
 import static io.qameta.allure.Allure.step;
+import static io.qameta.allure.SeverityLevel.*;
 
 @Tag("local")
-public class LocalTests extends TestBase {
+@Epic(value = "Проверка мобильного приложения Wikipedia")
+@Feature(value = "Проверка основных страниц приложения")
+@Owner("Overloque")
+public class LocalTests extends BaseTest {
     @Test
+    @Severity(NORMAL)
     @DisplayName("Проверка страницы 1-го шага")
     void firstWikiPageTest() {
         step("Открыть страницу и проверить текст кнопки добавления языков", () -> {
@@ -25,6 +29,7 @@ public class LocalTests extends TestBase {
     }
 
     @Test
+    @Severity(NORMAL)
     @DisplayName("Проверка страницы 2-го шага")
     void secondWikiPageTest() {
         step("Перейти на 2-й шаг", () -> {
@@ -42,6 +47,7 @@ public class LocalTests extends TestBase {
     }
 
     @Test
+    @Severity(NORMAL)
     @DisplayName("Проверка страницы 3-го шага")
     void thirdWikiPageTest() {
         step("Перейти на 3-й шаг", () -> {
@@ -61,6 +67,7 @@ public class LocalTests extends TestBase {
     }
 
     @Test
+    @Severity(NORMAL)
     @DisplayName("Проверка страницы 4-го шага")
     void fourthWikiPageTest() {
         step("Перейти на 4-й шаг", () -> {

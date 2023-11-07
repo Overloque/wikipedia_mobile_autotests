@@ -1,4 +1,4 @@
-package demo.qa.config;
+package com.wikipedia.config;
 
 import org.aeonbits.owner.Config;
 

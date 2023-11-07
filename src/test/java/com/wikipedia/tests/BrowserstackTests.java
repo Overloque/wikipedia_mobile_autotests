@@ -1,19 +1,25 @@
-package demo.qa.tests;
+package com.wikipedia.tests;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Condition.exist;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 import static io.appium.java_client.AppiumBy.*;
 import static io.qameta.allure.Allure.step;
+import static io.qameta.allure.SeverityLevel.NORMAL;
 
 @Tag("browserstack")
-public class BrowserstackTests extends TestBase {
+@Epic(value = "Проверка мобильного приложения Wikipedia")
+@Feature(value = "Проверка основных страниц приложения")
+@Owner("Overloque")
+public class BrowserstackTests extends BaseTest {
     @Test
+    @Severity(NORMAL)
     @DisplayName("Проверка непустой выдачи при запросе")
     void successfulSearchTest() {
         step("Ввести запрос", () -> {
@@ -27,6 +33,7 @@ public class BrowserstackTests extends TestBase {
     }
 
     @Test
+    @Severity(NORMAL)
     @DisplayName("Проверка отображения иконки ошибки при переходе в статью")
     void checkErrorIcon() {
         step("Ввести запрос", () -> {
