@@ -1,7 +1,7 @@
-# Проект по автоматизации тестовых сценариев для сайта компании [Tinkoff](https://www.tinkoff.ru)
-<p align="center"><a href="https://www.tinkoff.ru"><img src="images/logo/Tinkoff.png" align="center" width="600" height="300"  alt="Java"/></a></p>  
+# Проект по автоматизации mobile тестов для приложения [Wikipedia](https://ru.wikipedia.org/)
+<p align="center"><a href="https://www.tinkoff.ru"><img src="images/logo/Wiki.png" align="center" width="600" height="300" alt="Wiki"/></a></p>  
 
-> Tinkoff - российский коммерческий банк, сфокусированный полностью на дистанционном обслуживании, не имеющий розничных отделений. Крупнейший в мире онлайн-банк по количеству клиентов.  
+> Википедия - общедоступная многоязычная универсальная интернет-энциклопедия со свободным контентом, реализованная на принципах вики.
 
 ## :notebook: Содержание:
 
@@ -25,6 +25,8 @@
 <a href="https://www.gradle.org/"><img src="images/logo/Gradle.svg" width="50" height="50"/></a>
 <a href="https://www.junit.org/junit5/"><img src="images/logo/JUnit5.svg" width="50" height="50"/></a>
 <a href="https://www.selenide.org/"><img src="images/logo/Selenide.svg" width="50" height="50"/></a>
+<a href="https://appium.io/"><img src="images/logo/Appium.svg" width="50" height="50"/></a>
+<a href="https://www.browserstack.com/"><img src="images/logo/Browserstack.svg" width="50" height="50"/></a>
 <a href="https://www.aerokube.com/selenoid/"><img src="images/logo/Selenoid.svg" width="50" height="50"/></a>
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"/></a>
 <a href="https://github.com/allure-framework/allure2"><img src="images/logo/Allure.svg" width="50" height="50"/></a>
@@ -37,28 +39,16 @@
 
 ## :clipboard: Тестовые сценарии
 
-### Автоматизированные проверки
-- :white_check_mark: Главная страница
-    - :heavy_check_mark: Проверка появления списка подсказок в поисковой строке
-    - :heavy_check_mark: Проверка элементов списка из меню на главной странице
-- :white_check_mark: Раздел "Дебетовые карты"
-    - :heavy_check_mark: Проверка заголовка раздела 'Дебетовые карты'
-    - :heavy_check_mark: Проверка выбранной опции в фильтре карт при переходе в раздел
-- :white_check_mark: Раздел "Кредиты и ипотека"
-  - :heavy_check_mark: Проверка заполнения поля 'Цель кредита' при выборе значения из списка
-  - :heavy_check_mark: Проверка наличия 3-х шагов по составлению заявки на кредит
-- :white_check_mark: Раздел "Вклады"
-    - :heavy_check_mark: Проверка сокрытия сообщения при нажатии на чекбокс
-    - :heavy_check_mark: Проверка отображения информации при наведении на тултип
-- :white_check_mark: Раздел "Аналитика"
-  - :heavy_check_mark: Проверка отображения модального окна при попытке написать комментарий
-- :white_check_mark: Раздел "Помощь"
-  - :heavy_check_mark: Проверка заголовков страниц через параметры
+### Для локального запуска
+- :white_check_mark: Проверка стартовых страниц wiki
+- :white_check_mark: Проверка компонента "Saved"
+- :white_check_mark: Проверка добавления статьи в компонент "Saved"
+- :white_check_mark: Проверка компонента "More"
 
-### Ручные проверки
-- :white_check_mark: Проверка заголовка страницы "Кредиты и ипотекаа"
-- :white_check_mark: Проверка дизайна карты
-- :white_check_mark: Проверка 3-х блоков сервисов и услуг
+### Для удаленного запуска
+- :white_check_mark: Проверка отображения подсказок при вводе запроса
+- :white_check_mark: Проверка отображения иконки ошибки при переходе в некорректную статью
+- :white_check_mark: Проверка заголовка статьи
 
 ---
 
@@ -226,5 +216,5 @@ flowchart LR
 ## <img src="images/logo/Selenoid.svg" width="50" height="50"/> Видео запуска тестов в Selenoid
 
 <p align="center">
-<img src="images/gifs/Selenide_video.gif" alt="TestOps launch" width="800" height="400">
+<img src="images/gifs/" alt="TestOps launch" width="800" height="400">
 </p>

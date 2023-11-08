@@ -66,7 +66,7 @@ public class BrowserstackTests extends BaseTest {
         step("Клик на первый элемент", () ->
                 searchPage.clickFirstTip());
 
-        step("Проверка отображения иконки ошибки", () ->
+        step("Проверка отображения заголовка", () ->
                 articlePage.findText("Autotests"));
     }
 }
