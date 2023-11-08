@@ -10,7 +10,7 @@ import static io.qameta.allure.SeverityLevel.*;
 
 @Tag("browserstack")
 @Epic(value = "Проверка мобильного приложения Wikipedia")
-@Feature(value = "Проверка основных страниц приложения")
+@Feature(value = "Проверка поиска в приложении")
 @Owner("Overloque")
 public class BrowserstackTests extends BaseTest {
     SearchPage searchPage = new SearchPage();
