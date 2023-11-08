@@ -83,13 +83,13 @@ gradle clean browserstack_test -Dhost=browserstack
 ### Главная страница отчета
 
 <p align="center">
-<img src="images/screenshots/AllureReport.jpg" alt="Allure report" width="1000" height="400">
+<img src="images/screenshots/AllureReport.jpg" alt="Allure report" width="1000" height="350">
 </p>
 
 ### Тест-кейсы
 
 <p align="center">
-<img src="images/screenshots/AllureTestCases.jpg" alt="Test Case" width="1000" height="400">
+<img src="images/screenshots/AllureTestCases.jpg" alt="Test Case" width="1000" height="350">
 </p>
 
 #### Содержание тест-кейсов
