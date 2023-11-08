@@ -52,7 +52,7 @@ public class BrowserstackTests extends BaseTest {
 
     @Test
     @Severity(NORMAL)
-    @DisplayName("Проверка выдачи существующей статьи")
+    @DisplayName("Проверка заголовка статьи")
     void checkExisingArticle() {
         step("Кликнуть на поисковое поле", () ->
                 searchPage.clickSearch());
