@@ -1,5 +1,5 @@
 # Проект по автоматизации mobile тестов для приложения [Wikipedia](https://ru.wikipedia.org/)
-<p align="center"><a href="https://www.tinkoff.ru"><img src="images/logo/Wiki.png" align="center" width="600" height="300" alt="Wiki"/></a></p>  
+<p align="center"><a href="https://www.tinkoff.ru"><img src="images/logo/Wiki.jpg" align="center" width="500" height="300" alt="Wiki"/></a></p>  
 
 > Википедия - общедоступная многоязычная универсальная интернет-энциклопедия со свободным контентом, реализованная на принципах вики.
 
@@ -52,68 +52,33 @@
 
 ---
 
-## <img src="images/logo/Jenkins.svg" width="50" height="50"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/tinkoff_autotests_kpoludnitsyn_new/)
+## <img src="images/logo/Jenkins.svg" width="50" height="50"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/wikipedia_mobile_kpoludnitsyn/)
 
 <p align="center">
 <img src="images/screenshots/JenkinsPage.jpg" alt="Jenkins Page" width="1000" height="350">
-</p>
-
-### Параметры сборки проекта
-
-| Параметр        | Назначение                               |
-|-----------------|------------------------------------------|
-| REMOTE_URL      | Удаленный сервер для запуска тестов      |
-| BROWSER         | Браузер для запуска                      |
-| BROWSER_VERSION | Версия браузера                          |
-| BROWSER_SIZE    | Разрешение экрана                        |
-| BASE_URL        | Адрес сайта                              |
-| TASK            | Опция выбора запуска определённых тестов |
-
-### Запуск тестов с параметрами в **Jenkins**
-
-<p align="center">
-<img src="images/screenshots/JenkinsLaunch.jpg" alt="Jenkins Launch" width="1000" height="400">
 </p>
 
 ---
 
 ## :rocket: Команды для запуска
 
-### Локальный запуск
+### Локальный запуск (через эмулятор)
 
 ```bash
-gradle clean test
+gradle clean local_test -Dhost=local
 ```
 
-### Удаленный запуск
+> Для запуска локальных тестов требуются следующие установленные программы на компьютере: Appium Server, Appium и Android Studio
+
+### Удаленный запуск (через browserstack)
+
 ```bash
-clean
-${TASK}
--Dbrowser=${BROWSER}
--DbrowserSize=${BROWSER_SIZE}
--DbrowserVersion=${BROWSER_VERSION}
--DbaseUrl=${BASE_URL}
--DremoteUrl=${REMOTE_URL}
-```
-
-### Варианты запуска тестов
-
-Для запуска можно выбрать один из семи тест-сьютов:
-
-```mermaid
-flowchart LR
-    A[Test Suite] --> B[Все тесты] --> C[test]
-    A --> D[Главная страница] --> E[main_test]
-    A --> F[Раздел 'Дебетовые карты'] --> G[debit_test]
-    A --> H[Раздел 'Кредиты и ипотека'] --> I[credit_test]
-    A --> J[Раздел 'Вклады'] --> K[savings_test]
-    A --> L[Раздел 'Аналитика'] --> M[analytics_test]
-    A --> N[Раздел 'Помощь'] --> O[help_test]
+gradle clean browserstack_test -Dhost=browserstack
 ```
 
 ---
 
-## <img src="images/logo/Allure.svg" width="50" height="50"/> [Allure](https://jenkins.autotests.cloud/job/tinkoff_autotests_kpoludnitsyn_new/6/allure/) отчет
+## <img src="images/logo/Allure.svg" width="50" height="50"/> [Allure](https://jenkins.autotests.cloud/job/wikipedia_mobile_kpoludnitsyn/allure/) отчет
 
 ### Главная страница отчета
 
@@ -134,10 +99,7 @@ flowchart LR
 - :heavy_check_mark: Эпик
 - :heavy_check_mark: Критичность теста
 - :heavy_check_mark: Автор
-- :heavy_check_mark: Ссылка на раздел сайта (для каждый тестов свой раздел)
-- :heavy_check_mark: Последний скриншот для каждого теста 
-- :heavy_check_mark: HTML разметка страницы
-- :heavy_check_mark: Логи браузера
+- :heavy_check_mark: Разметка в приложении
 - :heavy_check_mark: Видео с прохождением теста
 
 ### Графики
@@ -148,7 +110,7 @@ flowchart LR
 
 ---
 
-## <img src="images/logo/AllureTestOps.svg" width="50" height="50"/> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3675/dashboards)
+## <img src="images/logo/AllureTestOps.svg" width="50" height="50"/> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3764/dashboards)
 
 ### Dashboard
 
@@ -156,16 +118,10 @@ flowchart LR
 <img src="images/screenshots/TestOps_dashboard.jpg" alt="TestOps dashboard" width="1000" height="400">
 </p>
 
-### Ручные и автоматизированные тест-кейсы
+### Автоматизированные тест-кейсы
 
 <p align="center">
 <img src="images/screenshots/TestOps_testCases.jpg" alt="TestOps test cases" width="1000" height="400">
-</p>
-
-### Запуск автоматизированных тестов в **TestOps**
-
-<p align="center">
-<img src="images/screenshots/TestOps_launch.jpg" alt="TestOps launch" width="1000" height="400">
 </p>
 
 ### Запуск сборки из **Allure TestOps**
@@ -176,7 +132,7 @@ flowchart LR
 
 ---
 
-## <img src="images/logo/Jira.svg" width="50" height="50"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-929)
+## <img src="images/logo/Jira.svg" width="50" height="50"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-939)
 
 ### Задача в Jira
 
@@ -186,8 +142,6 @@ flowchart LR
 
 #### Содержание задачи
 
-- :heavy_check_mark: Цель
-- :heavy_check_mark: Задачи для выполнения
 - :heavy_check_mark: Тест-кейсы из Allure TestOps
 - :heavy_check_mark: Результат прогона тестов в Allure TestOps
 
